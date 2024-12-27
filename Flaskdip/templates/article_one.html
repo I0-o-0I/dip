@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{article.title}}</title>
+    <link rel="stylesheet" href='{{ url_for("static", filename="style.css")}}'>
+</head>
+<body>
+    <h1 style="color: #C71E7E">{{article.title}}</h1><br>
+    <p>{{article.content}}</p><br>
+    <button class='btn'><a href="/articles/{{article.id}}/update" style="text-decoration: none; color: #C71E7E;">Редактировать</a></button>
+    <button class='btn'><a href="/articles/{{article.id}}/delete_question" style="text-decoration: none; color: #C71E7E;">Удалить</a></button>
+</body>
+</html>

@@ -1,0 +1,49 @@
+{% extends 'top.html' %}
+{% load static %}
+
+{% block title %}
+    <meta charset="UTF-8">
+    <title>Новости</title>
+    <link rel="stylesheet" href= '{% static "styles.css" %}'>
+{% endblock %}
+
+{% block header %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <hr>
+    {% for new in news %}
+        <div style="text-align: center;">
+                <h2>{{ new.title }}</h2>
+                {% if new.image %}
+                <img src="{{new.image.url}}" weight="300" height="300">
+                {% else %}
+                <p></p>
+                {% endif %}
+                <br>
+                {{ new.content }}
+                <br>
+                <small style="float: right; margin-right: 20px;">{{ new.date }}</small>
+                <hr>
+        </div>
+    {% endfor %}
+
+    <div class="pagination">
+        <span class="step-links">
+            {% if news.has_previous %}
+
+                <a href="?page={{ news.previous_page_number }}" style="text-decoration: none; color: #000; font-size: 25px;"> < </a>
+            {% endif %}
+
+            {% if news.has_next %}
+                <a href="?page={{ news.next_page_number }}" style="text-decoration: none; color: #000; font-size: 25px;"> > </a>
+
+            {% endif %}
+        </span>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {{block.super}}
+{% endblock %}

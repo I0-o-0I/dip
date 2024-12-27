@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+    background-color: #e7d4c3;
+}
+
+
+.line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    margin-right: 25px;
+}
+
+.top-item{
+    color: #333;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    margin-right: 25px;
+    margin-top: 20px;
+}
+
+
+.info-text{
+    color: #000;
+    width: 650px;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(info.jpg);
+    background-size: 100;
+    height: 70vh;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+

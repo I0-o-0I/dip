@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Салаты</title>
+    <link rel="stylesheet" href= '{% static "styles.css" %}'>
+</head>
+<body style="background-color: #e7d4c3; margin-left: 50px; margin-right: 50px">
+
+    {% for i in salads%}
+    <div>
+    <hr>
+    {% if i.image %}
+    <p style="text-align: center;"><img src="{{i.image.url}}" weight="300" height="300"  ></p>
+    {% else %}
+    <p></p>
+    {% endif %}
+
+
+    <h2>{{ i.title }}</h2>
+
+    <br>
+    {{ i.description }}
+    <br>
+
+    <p>{{ i.cost }}</p>
+
+    </hr>
+    </div>
+    {% endfor %}
+
+
+
+    <div class="pagination">
+        <span >
+            {% if salads.has_previous %}
+
+                <a href="?page={{ salads.previous_page_number }}" style="text-decoration: none; color: #000; font-size: 25px;"> < </a>
+            {% endif %}
+
+            {% if salads.has_next %}
+                <a href="?page={{ salads.next_page_number }}" style="text-decoration: none; color: #000; font-size: 25px;"> > </a>
+
+            {% endif %}
+        </span>
+    </div>
+</body>
+</html>

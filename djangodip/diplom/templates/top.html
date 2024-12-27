@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block title %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href= '{% static "styles.css" %}'>
+    <title>Главная</title>
+
+    {% endblock %}
+</head>
+<body>
+    <header class="header">
+        {% block header %}
+            <div class="line">
+                <div class="logo">
+                    <img src="{% static 'logo.JPG' %}" alt="logo" style="margin: 10px; width: 90px;">
+                </div>
+
+                <div class="top">
+                    {% block menu %}
+                        <a class='top-item' href="/">О нас</a>
+                        <a class='top-item' href="/news">Новости</a>
+                        <a class='top-item' href="/menu">Меню</a>
+                        <a class='top-item' href="/contacts">Контакты</a>
+                    {% endblock %}
+                </div>
+            </div>
+        {% endblock%}
+    </header>
+
+    <main>
+        {% block content %}
+            <div class="info">
+                <p class="info-text">
+                    В уютном уголке города, где звучит музыка тоски и шепчет ветер, расположен маленький ресторан под названием
+                    "Маленькая тарелка". Это заведение, словно оазис, открывает свои двери для всех, кто хочет погрузиться в
+                    атмосферу домашнего уюта и настоящего гастрономического искусства.
+
+                    Интерьер ресторана оформлен с любовью: мягкое освещение, деревянные столы и детали ручной работы создают
+                    теплую и уютную атмосферу. Каждый уголок здесь напоминает о традициях, а авторская кухня радует
+                    разнообразием блюд, основанных на местных продуктах.
+                </p>
+    </div>
+        {% endblock %}
+    </main>
+
+    <footer>
+        {% block footer %}
+            <p class="footer">© 2024 – Маленькая тарелка</p>
+        {% endblock %}
+    </footer>
+</body>
+</html>

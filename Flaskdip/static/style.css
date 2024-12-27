@@ -1,0 +1,45 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: #e5e5e5;
+}
+
+
+.btn__container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+    min-width: 110px;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: #C71E7E;
+    display: flex;
+   margin-right: 10px;
+}
+
+
+.textarea {
+    margin-top: 10px;
+	resize: none;
+	width: 400px;
+	height: 150px;
+}
+
+.text{
+    width: 800px;
+	height: 80px;
+    display: -webkit-box;
+    -webkit-line-clamp:3;
+    -width-box-orient: vertical;
+    overflow:hidden;
+    rext-overflow: ellipsis;
+}
+
+

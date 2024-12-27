@@ -1,0 +1,27 @@
+{% extends "top.html" %}
+{% load static %}
+
+{% block title %}
+    <meta charset="UTF-8">
+    <title>Контакты</title>
+    <link rel="stylesheet" href= '{% static "styles.css" %}'>
+{% endblock %}
+
+{% block menu %}
+    {{block.super}}
+{% endblock %}
+
+{% block content %}
+<div style="text-align: center;">
+    <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps?utm_medium=mapframe&utm_source=maps"
+        style="color:#eee;font-size:12px;position:absolute;top:0px;">Яндекс Карты</a>
+        <a href="https://yandex.ru/maps/geo/3984343280/?ll=33.182410%2C-73.052928&source=serp_navig&utm_medium=mapframe&utm_source=maps&z=3"
+        style="color:#eee;font-size:12px;position:absolute;top:14px;">Антарктида — Яндекс Карты</a>
+        <iframe src="https://yandex.ru/map-widget/v1/?ll=33.182410%2C-73.052928&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgozOTg0MzQzMjgwEgpBbnRhcmN0aWNhIgoN3RfsQRX-8p7C&source=serp_navig&z=3"
+        width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+</div>
+{% endblock %}
+
+{% block footer %}
+    {{block.super}}
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "top.html" %}
+{% load static %}
+
+{% block title %}
+    <meta charset="UTF-8">
+    <title>Меню</title>
+    <link rel="stylesheet" href= '{% static "styles.css" %}'>
+{% endblock %}
+
+{% block menu %}
+    {{block.super}}
+{% endblock %}
+
+{% block content %}
+    <div class="menu">
+        <a href="/menu/hotter">
+            <button>
+                <img src="{% static 'hot.jpg' %}" style="width: 300px;">
+                <h1><p>Горячие блюда</p></h1>
+            </button>
+        </a>
+
+        <a href="/menu/salads">
+            <button>
+                <img src="{% static 'salad.jpg' %}" style="width: 300px;">
+                <h1><p>Салаты</p></h1>
+            </button>
+        </a>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    {{block.super}}
+{% endblock %}

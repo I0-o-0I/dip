@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+    <link rel="stylesheet" href='{{ url_for("static", filename="style.css")}}'>
+</head>
+<body>
+
+    <div class='btn__container'>
+        <h1>Вы уверены, что хотите удалить статью?</h1>
+        <button class='btn'><a href="/articles/{{article.id}}/delete" style="text-decoration: none; color: #C71E7E;">ДА</a></button>
+        <button class='btn'><a href="/articles/{{article.id}}" style="text-decoration: none; color: #C71E7E;">НЕТ</a></button>
+    </div>
+</body>
+</html>

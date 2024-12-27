@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+    <link rel="stylesheet" href='{{ url_for("static", filename="style.css")}}'>
+</head>
+<body>
+    <div class="btn__container">
+    <form method="POST">
+        <input type="text" name="title" id="title" value="{{article.title}}" placeholder="Название" style="width: 400px"><br>
+        <textarea name="content" id="content" placeholder="Техт статьи" class="textarea">{{article.content}}</textarea><br>
+        <button type="submit" class='btn'>Обновить</button>
+    </form>
+    </div>
+</body>
+</html>
